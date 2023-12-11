@@ -54,17 +54,18 @@ const RegistrationComponent = () => {
     };
 
     return (
-        <div className="flex h-screen">
-            <div className="w-1/2 flex items-center justify-center">
+        <div className="flex flex-col md:flex-row h-screen">
+
+            <div className="md:w-1/2 p-4">
                 <img
-                    className="max-w-full max-h-full"
+                    className="w-full h-full object-cover"
                     src="https://ik.imagekit.io/ep1jdi37yy7/WhatsApp%20Image%202023-12-03%20at%207.40.32%20PM_5Tmx4UwtRL.jpeg?updatedAt=1702205801282"
                     alt="Registration"
                 />
             </div>
 
-            <div className="w-1/2 flex items-center justify-center">
-                <form className="w-1/2" onSubmit={handleFormSubmit}>
+            <div className="md:w-1/2 flex items-center justify-center p-4">
+                <form className="w-full md:w-1/2" onSubmit={handleFormSubmit}>
                     <h2 className="text-3xl mb-6 font-bold text-gray-800">Shyam lucky draw</h2>
                     <div className="mb-4">
                         <input
