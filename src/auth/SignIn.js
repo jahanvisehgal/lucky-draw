@@ -52,63 +52,26 @@ const SignInComponent = () => {
     return (
         <div className="flex flex-col md:flex-row h-screen">
 
-            <div className="md:w-1/2 p-4">
+            <div className="md:w-1/2 p-4 mb-0">
                 <img
-                    className="w-full h-full object-cover"
-                    src="https://ik.imagekit.io/ep1jdi37yy7/WhatsApp%20Image%202023-12-03%20at%207.40.32%20PM_5Tmx4UwtRL.jpeg?updatedAt=1702205801282"
+                    className="w-full h-[70vh] md:h-full object-cover rounded-lg"
+                    src="https://ik.imagekit.io/ep1jdi37yy7/WhatsApp%20Image%202023-12-03%20at%207.40.32%20PM_eHuH1DfDt.png?updatedAt=1702314866763"
                     alt="Registration"
                 />
             </div>
 
-            <div className="md:w-1/2 flex items-center justify-center p-4">
-                <form className="w-full md:w-1/2" onSubmit={handleFormSubmit}>
-                    <h2 className="text-3xl mb-6 font-bold text-gray-800">Shyam lucky draw</h2>
+            <div className="md:w-1/2 flex flex-col items-center justify-center p-4 bg-gray-100 md:mt-0 mt-8">
+                <h2 className="text-3xl mb-6 font-bold text-blue-700">Shyam Lucky Draw</h2>
 
-                    <div className="mb-4">
-                        <input
-                            className="w-full p-2 border rounded placeholder-gray-400"
-                            type="email"
-                            name="username"
-                            value={formData.username}
-                            onChange={handleInputChange}
-                            placeholder="Email"
-                            required
-                        />
-                    </div>
-
-                    <div className="mb-4">
-                        <input
-                            className="w-full p-2 border rounded placeholder-gray-400"
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleInputChange}
-                            placeholder="Password"
-                            required
-                        />
-                    </div>
-
-                    <button
-                        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-                        type="submit"
-                    >
-                        Register
-                    </button>
-
-                    <div className="pt-2">
-                        <p className="text-gray-600 text-lg mb-2">
-                            Do not have an account?{" "}
-                            <a
-                                href="/register"
-                                className="text-blue-500 hover:underline"
-                            >
-                                Sign up
-                            </a>
-                        </p>
-                    </div>
-                </form>
+                <button
+                    className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
+                    type="submit"
+                >
+                    Check Result
+                </button>
             </div>
         </div>
+
     );
 };
 

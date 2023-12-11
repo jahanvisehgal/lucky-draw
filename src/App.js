@@ -13,7 +13,7 @@ function App() {
   // Function to redirect unauthenticated users to the sign-in route
   const redirectToSignIn = () => {
     if (expiresAt < Math.floor(Date.now() / 1000)) {
-      return <Navigate to="/signin" />;
+      return <Navigate to="/result" />;
     }
     return null; // Return null if no redirection is needed
   };
@@ -27,8 +27,7 @@ function App() {
             element={redirectToSignIn()} // Use the element prop directly
             index // Use the index prop to indicate the default route
           />
-          <Route path="/register" element={<RegistrationComponent />} />
-          <Route path="/signin" element={<SignInComponent />} />
+          <Route path="/result" element={<SignInComponent />} />
         </Routes>
       </Router>
       <ToastContainer />
